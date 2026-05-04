@@ -1,11 +1,14 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import NavbarNew from "./components/portfolio/NavbarNew";
-import HeroPremium from "./components/portfolio/HeroPremium";
-import About from "./components/portfolio/About";
-import SkillsNew from "./components/portfolio/SkillsNew";
-import ProjectsNew from "./components/portfolio/ProjectsNew";
-import ContactNew from "./components/portfolio/ContactNew";
-import Footer from "./components/portfolio/Footer";
+import NavbarNew     from "./components/portfolio/NavbarNew";
+import HeroPremium   from "./components/portfolio/HeroPremium";
+import About         from "./components/portfolio/About";
+import Experience    from "./components/portfolio/Experience";
+import Education     from "./components/portfolio/Education";
+import SkillsNew     from "./components/portfolio/SkillsNew";
+import ProjectsNew   from "./components/portfolio/ProjectsNew";
+import Certificates  from "./components/portfolio/Certificates";
+import ContactNew    from "./components/portfolio/ContactNew";
+import Footer        from "./components/portfolio/Footer";
 
 const NotFound = () => (
   <div
@@ -45,8 +48,11 @@ const IndexPage = () => (
     <main className="w-full">
       <HeroPremium />
       <About />
+      <Experience />
+      <Education />
       <SkillsNew />
       <ProjectsNew />
+      <Certificates />
       <ContactNew />
     </main>
     <Footer />

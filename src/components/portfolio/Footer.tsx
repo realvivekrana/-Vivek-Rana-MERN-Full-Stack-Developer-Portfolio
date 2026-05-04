@@ -3,11 +3,14 @@ import { ArrowUp, Mail, Phone, MapPin, Code2, ExternalLink } from "lucide-react"
 import { Github, Linkedin, Twitter, Instagram } from "lucide-react";
 
 const navLinks = [
-  { label: "Home",     href: "#home" },
-  { label: "About",    href: "#about" },
-  { label: "Skills",   href: "#skills" },
-  { label: "Projects", href: "#projects" },
-  { label: "Contact",  href: "#contact" },
+  { label: "Home",         href: "#home" },
+  { label: "About",        href: "#about" },
+  { label: "Experience",   href: "#experience" },
+  { label: "Education",    href: "#education" },
+  { label: "Skills",       href: "#skills" },
+  { label: "Projects",     href: "#projects" },
+  { label: "Certificates", href: "#certificates" },
+  { label: "Contact",      href: "#contact" },
 ];
 
 const socials = [

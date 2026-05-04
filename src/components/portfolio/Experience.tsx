@@ -2,123 +2,211 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Briefcase, Code2, MapPin, Calendar } from "lucide-react";
 
-// EXPERIENCE CONFIGURATION - Update your work experience here
 const experiences = [
   {
     icon: Code2,
-    year: "Sep 2023 - May 2024",
+    year: "Sep 2023 – May 2024",
     title: "MERN Stack Developer Trainee",
     company: "Skill Academy",
     location: "Mumbai, Maharashtra (Remote)",
-    description: "Learned full-stack development including HTML, CSS, JavaScript, React, and backend technologies.",
+    description:
+      "Learned full-stack development including HTML, CSS, JavaScript, React, and backend technologies.",
+    current: false,
   },
   {
     icon: Briefcase,
-    year: "Apr 2025 - Sep 2025",
+    year: "Apr 2025 – Sep 2025",
     title: "MERN Stack Developer Trainee",
     company: "CETPA Infotech Pvt Ltd",
     location: "Noida, Uttar Pradesh (On-site)",
-    description: "Completed training in MERN stack including React, Node.js, Express.js, and MongoDB. Built multiple full-stack projects.",
+    description:
+      "Completed training in MERN stack including React, Node.js, Express.js, and MongoDB. Built multiple full-stack projects.",
+    current: false,
   },
   {
     icon: Briefcase,
-    year: "Feb 2026 - Present",
+    year: "Feb 2026 – Present",
     title: "Frontend Developer Intern",
     company: "Athenura",
     location: "Noida, Uttar Pradesh (Remote)",
-    description: "Working on frontend development using HTML, Tailwind CSS, and modern UI practices.",
+    description:
+      "Working on frontend development using HTML, Tailwind CSS, and modern UI practices.",
+    current: true,
   },
 ];
 
 const Experience = () => {
-  const ref = useRef(null);
-  const inView = useInView(ref, { once: true, margin: "-100px" });
+  const ref    = useRef(null);
+  const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section id="experience" className="section-padding relative">
-      <div className="container mx-auto max-w-5xl" ref={ref}>
+    <section id="experience" className="relative py-16 sm:py-20 lg:py-28 overflow-hidden">
+      {/* Background */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background:
+            "radial-gradient(ellipse 60% 40% at 80% 50%, rgba(155,93,229,0.05) 0%, transparent 60%)",
+        }}
+      />
+
+      <div className="relative z-10 w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8" ref={ref}>
+
+        {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
+          className="text-center mb-12 sm:mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
-            Work <span className="gradient-text">Experience</span>
+          <p
+            className="text-xs sm:text-sm tracking-[0.25em] uppercase mb-3"
+            style={{ color: "#4F8EF7", fontFamily: "JetBrains Mono, monospace" }}
+          >
+            💼 Work History
+          </p>
+          <h2
+            className="font-black tracking-tight mb-4"
+            style={{ fontSize: "clamp(2rem, 6vw, 3.5rem)", color: "#F0F0FF" }}
+          >
+            Work{" "}
+            <span
+              style={{
+                background: "linear-gradient(135deg, #4F8EF7, #9B5DE5)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+              }}
+            >
+              Experience
+            </span>
           </h2>
-          <div className="w-20 h-1 bg-primary mx-auto mb-16 rounded-full" />
+          <motion.div
+            initial={{ scaleX: 0 }}
+            animate={inView ? { scaleX: 1 } : {}}
+            transition={{ delay: 0.3, duration: 0.5 }}
+            className="w-16 h-1 mx-auto rounded-full"
+            style={{
+              background: "linear-gradient(90deg, #4F8EF7, #9B5DE5)",
+              transformOrigin: "center",
+            }}
+          />
         </motion.div>
 
-        {/* Vertical Timeline */}
+        {/* Timeline */}
         <div className="relative">
-          {/* Vertical Line */}
-          <div className="absolute left-4 md:left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-primary/50 to-transparent" />
+          {/* Vertical line */}
+          <div
+            className="absolute top-0 bottom-0"
+            style={{
+              left: "20px",
+              width: "2px",
+              background:
+                "linear-gradient(to bottom, #4F8EF7 0%, rgba(79,142,247,0.3) 70%, transparent 100%)",
+            }}
+          />
 
-          <div className="space-y-8 md:space-y-12">
+          <div className="space-y-6 sm:space-y-8">
             {experiences.map((item, i) => (
               <motion.div
                 key={item.title + item.company}
-                initial={{ opacity: 0, x: -30 }}
+                initial={{ opacity: 0, x: -24 }}
                 animate={inView ? { opacity: 1, x: 0 } : {}}
-                transition={{ 
-                  delay: 0.2 + i * 0.15,
-                  duration: 0.6,
-                  ease: "easeOut"
-                }}
-                className="relative pl-12 md:pl-20"
+                transition={{ delay: 0.2 + i * 0.15, duration: 0.5 }}
+                className="relative pl-14 sm:pl-16"
               >
-                {/* Timeline Dot with Icon */}
-                <motion.div 
-                  initial={{ scale: 0, rotate: -180 }}
-                  animate={inView ? { scale: 1, rotate: 0 } : {}}
-                  transition={{ 
-                    delay: 0.3 + i * 0.15, 
-                    type: "spring", 
-                    stiffness: 200,
-                    damping: 10
+                {/* Timeline dot */}
+                <motion.div
+                  initial={{ scale: 0 }}
+                  animate={inView ? { scale: 1 } : {}}
+                  transition={{ delay: 0.3 + i * 0.15, type: "spring", stiffness: 200 }}
+                  className="absolute flex items-center justify-center rounded-full"
+                  style={{
+                    left: "6px",
+                    top: "20px",
+                    width: "28px",
+                    height: "28px",
+                    background: item.current
+                      ? "linear-gradient(135deg, #4F8EF7, #9B5DE5)"
+                      : "rgba(79,142,247,0.15)",
+                    border: "2px solid rgba(79,142,247,0.4)",
+                    boxShadow: item.current ? "0 0 12px rgba(79,142,247,0.5)" : "none",
                   }}
-                  className="absolute left-0 md:left-3 top-0 w-8 h-8 md:w-10 md:h-10 rounded-full bg-gradient-to-br from-primary to-primary/60 flex items-center justify-center shadow-lg shadow-primary/30 z-10"
                 >
-                  <item.icon className="text-primary-foreground" size={16} />
+                  <item.icon
+                    size={13}
+                    style={{ color: item.current ? "#fff" : "#4F8EF7" }}
+                  />
                 </motion.div>
 
-                {/* Experience Card */}
-                <motion.div 
-                  whileHover={{ scale: 1.02, x: 5 }}
+                {/* Card */}
+                <motion.div
+                  whileHover={{ x: 4 }}
                   transition={{ type: "spring", stiffness: 300 }}
-                  className="glass rounded-2xl p-6 md:p-8 hover:glow-border transition-all duration-300 group"
+                  className="rounded-2xl p-4 sm:p-5 transition-all duration-300"
+                  style={{
+                    background: "rgba(255,255,255,0.02)",
+                    border: "1px solid rgba(79,142,247,0.1)",
+                  }}
+                  onMouseEnter={e =>
+                    ((e.currentTarget as HTMLElement).style.borderColor = "rgba(79,142,247,0.3)")
+                  }
+                  onMouseLeave={e =>
+                    ((e.currentTarget as HTMLElement).style.borderColor = "rgba(79,142,247,0.1)")
+                  }
                 >
-                  {/* Date Badge */}
-                  <motion.div 
-                    initial={{ opacity: 0, y: -10 }}
-                    animate={inView ? { opacity: 1, y: 0 } : {}}
-                    transition={{ delay: 0.4 + i * 0.15 }}
-                    className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-mono font-bold mb-4"
-                  >
-                    <Calendar size={14} />
-                    {item.year}
-                  </motion.div>
+                  {/* Date + current badge */}
+                  <div className="flex flex-wrap items-center gap-2 mb-3">
+                    <div
+                      className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-bold"
+                      style={{
+                        color: "#4F8EF7",
+                        background: "rgba(79,142,247,0.1)",
+                        fontFamily: "JetBrains Mono, monospace",
+                      }}
+                    >
+                      <Calendar size={11} />
+                      {item.year}
+                    </div>
+                    {item.current && (
+                      <span
+                        className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-bold"
+                        style={{
+                          color: "#00C853",
+                          background: "rgba(0,200,83,0.1)",
+                          border: "1px solid rgba(0,200,83,0.25)",
+                        }}
+                      >
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#00C853] animate-pulse" />
+                        Current
+                      </span>
+                    )}
+                  </div>
 
-                  {/* Title & Company */}
-                  <h3 className="text-xl md:text-2xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
+                  {/* Title */}
+                  <h3
+                    className="font-bold text-sm sm:text-base mb-1"
+                    style={{ color: "#F0F0FF" }}
+                  >
                     {item.title}
                   </h3>
-                  <p className="text-base md:text-lg text-primary/90 font-semibold mb-3">
+
+                  {/* Company */}
+                  <p className="text-sm font-semibold mb-2" style={{ color: "#4F8EF7" }}>
                     {item.company}
                   </p>
 
                   {/* Location */}
-                  <div className="flex items-center gap-2 text-sm text-muted-foreground mb-4">
-                    <MapPin size={16} className="text-primary/70" />
-                    <span>{item.location}</span>
+                  <div className="flex items-center gap-1.5 mb-3">
+                    <MapPin size={13} style={{ color: "#4B4B6A" }} />
+                    <span className="text-xs" style={{ color: "#6B6B8A" }}>
+                      {item.location}
+                    </span>
                   </div>
 
                   {/* Description */}
-                  <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
+                  <p className="text-xs sm:text-sm leading-relaxed" style={{ color: "#8888AA" }}>
                     {item.description}
                   </p>
-
-                  {/* Decorative Element */}
-                  <div className="absolute top-6 right-6 w-20 h-20 bg-primary/5 rounded-full blur-2xl group-hover:bg-primary/10 transition-all duration-300" />
                 </motion.div>
               </motion.div>
             ))}
