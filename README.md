@@ -1,6 +1,6 @@
 # Vivek Kumar Rana - MERN Full Stack Developer Portfolio
 
-[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen)](https://your-portfolio-url.vercel.app)
+[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen)](https://portfolio-vivek-blue.vercel.app/)
 [![GitHub](https://img.shields.io/badge/GitHub-Repository-blue)](https://github.com/realvivekrana/-Vivek-Rana-MERN-Full-Stack-Developer-Portfolio)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
@@ -8,7 +8,7 @@
 
 ## 🌐 Live Demo
 
-**[View Live Portfolio](https://your-portfolio-url.vercel.app)** *(Will be updated after deployment)*
+**🚀 Live Portfolio:** https://portfolio-vivek-blue.vercel.app/
 
 ## 📋 About
 
@@ -29,41 +29,41 @@ This is my personal portfolio website built with modern web technologies. It fea
 ## 🛠️ Technologies Used
 
 ### Frontend
-- **React 18** - UI library
-- **TypeScript** - Type safety
-- **Vite** - Build tool and dev server
-- **Tailwind CSS** - Utility-first CSS framework
-- **Framer Motion** - Animation library
-- **Lucide React** - Icon library
+- **React 18**
+- **TypeScript**
+- **Vite**
+- **Tailwind CSS**
+- **Framer Motion**
+- **Lucide React**
 
 ### UI Components
-- **Shadcn UI** - Component library
-- **Radix UI** - Headless UI components
+- **Shadcn UI**
+- **Radix UI**
 - Custom glassmorphism effects
 
 ### Deployment
-- **Vercel** - Hosting and deployment
-- **GitHub** - Version control
+- **Vercel**
+- **GitHub**
 
 ## 📂 Project Structure
 
-```
+```text
 portfolio/
-├── public/                 # Static assets
+├── public/
 │   ├── Vivek-Kumar-Rana-Resume.pdf
 │   └── favicon.ico
 ├── src/
-│   ├── assets/            # Images and media
-│   ├── components/        # React components
-│   │   └── portfolio/     # Portfolio-specific components
-│   ├── contexts/          # React contexts (Theme)
-│   ├── data/              # Portfolio data
-│   ├── hooks/             # Custom hooks
-│   ├── lib/               # Utility functions
-│   ├── pages/             # Page components
-│   ├── App.tsx            # Main app component
-│   ├── main.tsx           # Entry point
-│   └── index.css          # Global styles
+│   ├── assets/
+│   ├── components/
+│   │   └── portfolio/
+│   ├── contexts/
+│   ├── data/
+│   ├── hooks/
+│   ├── lib/
+│   ├── pages/
+│   ├── App.tsx
+│   ├── main.tsx
+│   └── index.css
 ├── .gitignore
 ├── package.json
 ├── tsconfig.json
@@ -80,28 +80,33 @@ portfolio/
 
 ### Installation
 
-1. Clone the repository:
+1. Clone the repository
+
 ```bash
 git clone https://github.com/realvivekrana/-Vivek-Rana-MERN-Full-Stack-Developer-Portfolio.git
 ```
 
-2. Navigate to the project directory:
+2. Navigate to the project directory
+
 ```bash
 cd -Vivek-Rana-MERN-Full-Stack-Developer-Portfolio
 ```
 
-3. Install dependencies:
+3. Install dependencies
+
 ```bash
 npm install
 ```
 
-4. Start the development server:
+4. Start the development server
+
 ```bash
 npm run dev
 ```
 
-5. Open your browser and visit:
-```
+5. Open your browser
+
+```text
 http://localhost:8080
 ```
 
@@ -121,30 +126,28 @@ npm run test
 
 ## 📝 Available Scripts
 
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run preview` - Preview production build
-- `npm run lint` - Run ESLint
-- `npm run test` - Run tests
+- `npm run dev`
+- `npm run build`
+- `npm run preview`
+- `npm run lint`
+- `npm run test`
 
 ## 🎨 Customization
 
 ### Update Personal Information
 
-Edit the following files to customize with your information:
+Edit these files:
 
-1. **Personal Data**: `src/data/portfolio-data.ts`
-2. **Hero Section**: `src/components/portfolio/Hero.tsx`
-3. **About Section**: `src/components/portfolio/About.tsx`
-4. **Skills**: `src/components/portfolio/Skills.tsx`
-5. **Projects**: `src/components/portfolio/Projects.tsx`
-6. **Experience**: `src/components/portfolio/Experience.tsx`
-7. **Education**: `src/components/portfolio/Education.tsx`
-8. **Certificates**: `src/components/portfolio/Certificates.tsx`
+1. `src/data/portfolio-data.ts`
+2. `src/components/portfolio/Hero.tsx`
+3. `src/components/portfolio/About.tsx`
+4. `src/components/portfolio/Skills.tsx`
+5. `src/components/portfolio/Projects.tsx`
+6. `src/components/portfolio/Experience.tsx`
+7. `src/components/portfolio/Education.tsx`
+8. `src/components/portfolio/Certificates.tsx`
 
 ### Add New Projects
-
-Edit `src/components/portfolio/Projects.tsx` and add your project to the `projects` array:
 
 ```typescript
 {
@@ -159,86 +162,93 @@ Edit `src/components/portfolio/Projects.tsx` and add your project to the `projec
 
 ### Change Theme Colors
 
-Edit `src/index.css` to modify the color scheme:
-
 ```css
 :root {
-  --primary: 185 95% 45%;  /* Cyan */
-  --accent: 270 60% 55%;   /* Purple */
-  /* ... other colors */
+  --primary: 185 95% 45%;
+  --accent: 270 60% 55%;
 }
 ```
 
 ## 📱 Sections
 
-1. **Hero** - Introduction with typing animation
-2. **About** - Brief introduction and highlights
-3. **Skills** - Technical skills with progress bars
-4. **Projects** - Portfolio of work
-5. **Experience** - Work history timeline
-6. **Education** - Academic background
-7. **Certificates** - Professional certifications
-8. **Contact** - Contact form and social links
-9. **Footer** - Copyright and additional info
+1. Hero
+2. About
+3. Skills
+4. Projects
+5. Experience
+6. Education
+7. Certificates
+8. Contact
+9. Footer
 
-## 🌟 Key Features Explained
+## 🌟 Key Features
 
 ### Dark/Light Mode
-- Toggle button in navbar
-- Smooth transitions between themes
-- Preference saved in localStorage
-- Proper color schemes for both modes
+
+- Theme toggle
+- Smooth transitions
+- localStorage support
+- Optimized colors
 
 ### Mobile Navigation
-- Slide-in menu from right
-- Backdrop with blur effect
-- Auto-close on link click
-- Touch-friendly interface
+
+- Slide-in menu
+- Blur backdrop
+- Auto-close menu
+- Touch-friendly
 
 ### Animations
-- Scroll-triggered animations
-- Hover effects on cards
-- Typing animation in hero
-- Smooth page transitions
+
+- Scroll animations
+- Hover effects
+- Typing animation
+- Smooth transitions
 
 ## 🔧 Configuration Files
 
-- `vite.config.ts` - Vite configuration
-- `tailwind.config.ts` - Tailwind CSS configuration
-- `tsconfig.json` - TypeScript configuration
-- `eslint.config.js` - ESLint configuration
-- `postcss.config.js` - PostCSS configuration
+- `vite.config.ts`
+- `tailwind.config.ts`
+- `tsconfig.json`
+- `eslint.config.js`
+- `postcss.config.js`
 
 ## 📄 License
 
-This project is open source and available under the [MIT License](LICENSE).
+This project is licensed under the **MIT License**.
 
 ## 👤 Author
 
 **Vivek Kumar Rana**
 
-- GitHub: [@realvivekrana](https://github.com/realvivekrana)
-- LinkedIn: [Vivek Kumar Rana](https://www.linkedin.com/in/mrvivekrana/)
-- Twitter: [@mrvivaanrana](https://x.com/mrvivaanrana)
+- 🌐 Portfolio: https://portfolio-vivek-blue.vercel.app/
+- 💻 GitHub: https://github.com/realvivekrana
+- 💼 LinkedIn: https://www.linkedin.com/in/mrvivekrana/
+- 🐦 X (Twitter): https://x.com/mrvivaanrana
 
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/realvivekrana/-Vivek-Rana-MERN-Full-Stack-Developer-Portfolio/issues).
+Feel free to open an issue or submit a pull request.
 
 ## ⭐ Show Your Support
 
-Give a ⭐️ if you like this project!
+If you like this project, don't forget to **⭐ Star this repository**.
 
 ## 📞 Contact
 
-For any inquiries or collaboration opportunities, feel free to reach out:
+For any inquiries or collaboration opportunities:
 
-- Email: your.email@example.com
-- LinkedIn: [Vivek Kumar Rana](https://www.linkedin.com/in/mrvivekrana/)
-- Portfolio: [Live Demo](https://your-portfolio-url.vercel.app)
+- 📧 Email: your.email@example.com
+- 💼 LinkedIn: https://www.linkedin.com/in/mrvivekrana/
+- 🌐 Portfolio: https://portfolio-vivek-blue.vercel.app/
 
 ---
 
+<div align="center">
+
+### ⭐ Thanks for visiting my portfolio!
+
 **Built with ❤️ by Vivek Kumar Rana**
+
+</div>
